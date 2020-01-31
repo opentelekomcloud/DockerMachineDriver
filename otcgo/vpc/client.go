@@ -9,8 +9,8 @@ import (
 	_ "time"
 
 	"github.com/docker/machine/libmachine/log"
-	"github.com/opentelekomcloud/DockerMachineDriver/otcgo/common"
-	"github.com/opentelekomcloud/DockerMachineDriver/otcgo/signer"
+	"github.com/opentelekomcloud/dockermachinedriver/otcgo/common"
+	"github.com/opentelekomcloud/dockermachinedriver/otcgo/signer"
 )
 
 const (

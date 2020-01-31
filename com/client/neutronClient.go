@@ -17,9 +17,9 @@ package client
 
 import (
 	"encoding/json"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/cpp_sdk_core"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/neutronModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/cpp_sdk_core"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/neutronModules"
 )
 
 /*
@@ -32,7 +32,7 @@ import (
 */
 func (client *Client) CreateSecurityGroupRule(createSecurityGroupRuleReq *neutronModules.CreateSecurityGroupRuleReq) *neutronModules.CreateSecurityGroupRuleResp {
 	CreateSecurityGroupRuleResp := &neutronModules.CreateSecurityGroupRuleResp{}
-	client.RequestParam.Url = "https://vpc." +  client.RequestParam.Endpoint + "/v2.0/security-group-rules"
+	client.RequestParam.Url = "https://vpc." + client.RequestParam.Endpoint + "/v2.0/security-group-rules"
 
 	client.RequestParam.Method = "POST"
 	client.RequestParam.BodyContent = createSecurityGroupRuleReq.GetBodyContent()
@@ -65,7 +65,7 @@ func (client *Client) CreateSecurityGroupRule(createSecurityGroupRuleReq *neutro
 */
 func (client *Client) ShowSecurityGroupRule(rules_security_groups_id string) *neutronModules.ShowSecurityGroupRuleResp {
 	ShowSecurityGroupRuleResp := &neutronModules.ShowSecurityGroupRuleResp{}
-	client.RequestParam.Url = "https://vpc." +  client.RequestParam.Endpoint + "/v2.0/security-group-rules/" + rules_security_groups_id
+	client.RequestParam.Url = "https://vpc." + client.RequestParam.Endpoint + "/v2.0/security-group-rules/" + rules_security_groups_id
 
 	client.RequestParam.Method = "GET"
 	client.RequestParam.BodyContent = ""
@@ -98,7 +98,7 @@ func (client *Client) ShowSecurityGroupRule(rules_security_groups_id string) *ne
 */
 func (client *Client) DeleteSecurityGroupRule(rules_security_groups_id string) *neutronModules.DeleteSecurityGroupRuleResp {
 	DeleteSecurityGroupRuleResp := &neutronModules.DeleteSecurityGroupRuleResp{}
-	client.RequestParam.Url = "https://vpc." +  client.RequestParam.Endpoint + "/v2.0/security-group-rules/" + rules_security_groups_id
+	client.RequestParam.Url = "https://vpc." + client.RequestParam.Endpoint + "/v2.0/security-group-rules/" + rules_security_groups_id
 
 	client.RequestParam.Method = "DELETE"
 	client.RequestParam.BodyContent = ""

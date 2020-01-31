@@ -18,8 +18,8 @@ package client
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/cpp_sdk_core"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/cpp_sdk_core"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
 	"time"
 )
 

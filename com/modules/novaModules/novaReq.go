@@ -16,7 +16,7 @@
 package novaModules
 
 import (
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
 )
 
 /* The request Params need by createKeypair Start */

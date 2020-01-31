@@ -18,9 +18,9 @@ package client
 import (
 	"encoding/json"
 	"github.com/docker/machine/libmachine/log"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/cpp_sdk_core"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/ecsModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/cpp_sdk_core"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/ecsModules"
 )
 
 func (client *Client) CreateCloudServer(createCloudServerReq ecsModules.CreateCloudServerReq) ecsModules.CreateCloudServerResp {

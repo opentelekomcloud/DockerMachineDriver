@@ -18,9 +18,9 @@ package client
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/cpp_sdk_core"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/novaModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/cpp_sdk_core"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/novaModules"
 )
 
 func (client *Client) ListInterfaces(server_id string) novaModules.ListInterfacesResp {

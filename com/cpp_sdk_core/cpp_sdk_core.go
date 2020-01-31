@@ -23,7 +23,7 @@ import (
 	"errors"
 	"fmt"
 	"github.com/docker/machine/libmachine/log"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
 	"io/ioutil"
 	"net"
 	"net/http"
@@ -68,8 +68,8 @@ func getTransport() *http.Transport {
 	}
 
 	return &http.Transport{
-		DisableCompression: true,
-		Dial:               dial,
+		DisableCompression:    true,
+		Dial:                  dial,
 		ResponseHeaderTimeout: time.Second * time.Duration(30),
 		TLSClientConfig:       &tls.Config{InsecureSkipVerify: true},
 	}

@@ -16,7 +16,7 @@
 package imsModules
 
 import (
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
 )
 
 // The response of querying images

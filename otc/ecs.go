@@ -11,16 +11,16 @@ import (
 	"strings"
 	"time"
 
-	_ "github.com/opentelekomcloud/DockerMachineDriver/otcgo/ecs"
-	_ "github.com/opentelekomcloud/DockerMachineDriver/otcgo/ims"
-	_ "github.com/opentelekomcloud/DockerMachineDriver/otcgo/vpc"
+	_ "github.com/opentelekomcloud/dockermachinedriver/otcgo/ecs"
+	_ "github.com/opentelekomcloud/dockermachinedriver/otcgo/ims"
+	_ "github.com/opentelekomcloud/dockermachinedriver/otcgo/vpc"
 
-	"github.com/opentelekomcloud/DockerMachineDriver/com/client"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/ecsModules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/imsModules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/novaModules"
-	"github.com/opentelekomcloud/DockerMachineDriver/com/modules/vpcModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/client"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/ecsModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/imsModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/novaModules"
+	"github.com/opentelekomcloud/dockermachinedriver/com/modules/vpcModules"
 
 	"github.com/docker/machine/libmachine/drivers"
 	"github.com/docker/machine/libmachine/log"
@@ -199,9 +199,9 @@ func (d *Driver) GetCreateFlags() []mcnflag.Flag {
 			EnvVar: "SSH_USER",
 		},
 		mcnflag.IntFlag{
-			Name: "otc-elastic-ip",
-			Usage: "Set it to 1 to allocate ElasticIP",
-			Value: 0,
+			Name:   "otc-elastic-ip",
+			Usage:  "Set it to 1 to allocate ElasticIP",
+			Value:  0,
 			EnvVar: "ELASTIC_IP",
 		},
 	}
@@ -643,9 +643,9 @@ func (d *Driver) checkJobStatus(jobid string) error {
 func (d *Driver) configureNetwork() error {
 
 	// Exit if ElasticIp is set to false
-	if d.ElasticIpBool == 0 { 
+	if d.ElasticIpBool == 0 {
 		log.Infof("%s | An ElasticIp won't be allocated", d.MachineName)
-		return nil 
+		return nil
 	}
 
 	log.Debugf("%s | Allocate elastic ip ...", d.MachineName)
